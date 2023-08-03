@@ -12,11 +12,11 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const rootReducer = combineReducers({
-    produce: produceReducer
+    produce: produceReducer,
     cart: cartReducer
   });
 
-const configureStore = (preloadedState) => {
+const configureStore = (preloadedState = {}) => {
     return createStore(rootReducer, preloadedState, enhancer);
   };
   
